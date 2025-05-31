@@ -32,13 +32,17 @@ You can obtain a token by using the login endpoints for either customers or admi
 ## Setup
 1. Create a `.env` file in the root directory with the following variables:
 ```
+
+BACKEND_PORT=4000
 DB_HOST=localhost
 DB_PORT=5432
+DB_USER=restaurant_user
+DB_PASSWORD=Restaurant1@3
 DB_NAME=restaurant_db
-DB_USER=postgres
-DB_PASSWORD=your_password
 JWT_SECRET=your_jwt_secret
-PORT=3000
+SENDGRID_API_KEY=your_sendgrid_api
+SENDGRID_FROM_EMAIL=your_sendgrid_email
+
 ```
 
 2. Set up the database:
