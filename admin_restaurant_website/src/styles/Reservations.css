@@ -1,0 +1,95 @@
+/* src/styles/Reservations.css */
+
+.reservation-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .reservation-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .res-card-row {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .res-card-key {
+    font-weight: bold;
+    width: 150px;
+    color: #555555;
+  }
+  
+  /* Status styling */
+  .status-confirmed {
+    color: #2e7d32;
+    font-weight: 500;
+  }
+  
+  .status-cancelled {
+    color: #d32f2f;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+  
+  .status-attended {
+    color: #1976d2;
+    font-weight: 500;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    text-align: left;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-weight: 600;
+  }
+  
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .res-card-key {
+      width: 120px;
+    }
+    
+    .filter-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* Animation for newly added reservations */
+  @keyframes highlight {
+    0% { background-color: #fff9c4; }
+    100% { background-color: #ffffff; }
+  }
+  
+  .reservation-highlight {
+    animation: highlight 2s ease-out;
+  }

@@ -1,0 +1,396 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    background: #fff;
+    padding: 1.2rem 3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+    color: #4CAF50;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 2.5rem;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 2rem;
+}
+
+.login-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+}
+
+/* Promo Side */
+.promo-side {
+    width: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+}
+
+.promo-side h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+    color: white;
+}
+
+.promo-side p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.promo-side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.promo-side ul li {
+    margin: 1rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+.promo-side ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+/* Login Side */
+.login-side {
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-side h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 0 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    text-align: center;
+    margin: 0 0 2rem;
+    font-size: 1rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.forgot-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9rem;
+    align-self: flex-end;
+    margin: -0.5rem 0 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 1rem 0;
+}
+
+.login-btn:hover {
+    background: #45a049;
+}
+
+.signup-text {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.signup-text a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.guest-booking {
+    margin-top: auto;
+    text-align: center;
+}
+
+.guest-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+}
+
+.guest-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.guest-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .promo-side,
+    .login-side {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .promo-side {
+        min-height: 300px;
+    }
+
+    .guest-booking {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        padding: 5rem 1rem 1rem;
+    }
+
+    .promo-side h2 {
+        font-size: 2rem;
+    }
+
+    .login-side {
+        padding: 1.5rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1a1f36;
+    color: #fff;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.restaurant-info {
+    max-width: 400px;
+}
+
+.restaurant-info h3, .hours h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .content-left {
+        min-height: 300px;
+    }
+
+    .login-container {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-left {
+        padding: 1rem;
+    }
+
+    .promo-text {
+        padding: 1.5rem;
+    }
+
+    .promo-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .login-box {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        margin: 0 0.75rem;
+    }
+}

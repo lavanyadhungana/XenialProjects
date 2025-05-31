@@ -1,0 +1,145 @@
+/* src/styles/CustomTheme.css */
+
+/* Global theme overrides and additional styles to match the public website aesthetic */
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+/* Apply the font to the entire admin interface */
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Status badge styling */
+.status-badge-upcoming {
+  background-color: rgba(41, 128, 185, 0.1);
+  color: #2980b9;
+  border: 1px solid #2980b9;
+}
+
+.status-badge-attended {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  border: 1px solid #27ae60;
+}
+
+.status-badge-no-show {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+  border: 1px solid #f39c12;
+}
+
+.status-badge-cancelled {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+/* Enhanced table styling */
+.MuiTableContainer-root {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.MuiTableHead-root {
+  background-color: #f9f9f9;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  font-weight: 600;
+}
+
+.MuiTableRow-root:hover {
+  background-color: rgba(169, 50, 38, 0.03); /* A93226 with low opacity */
+}
+
+/* Beautiful form styling */
+.MuiFormControl-root .MuiInputLabel-root.Mui-focused {
+  color: #A93226;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #A93226;
+}
+
+/* Card styling to match public website aesthetic */
+.dashboard-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu tags styling */
+.menu-tag {
+  background-color: rgba(169, 50, 38, 0.1);
+  color: #A93226;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* Login page enhancement */
+.admin-login-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login-card {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Drawer styling */
+.MuiDrawer-paper {
+  background-color: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.drawer-header {
+  background-color: #A93226;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.drawer-item.active {
+  background-color: rgba(169, 50, 38, 0.1);
+  color: #A93226;
+  border-left: 3px solid #A93226;
+}
+
+.drawer-item:hover {
+  background-color: rgba(169, 50, 38, 0.05);
+}
+
+/* Custom scrollbar for a polished look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A93226;
+}

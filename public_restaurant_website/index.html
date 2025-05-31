@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marko Italian Restaurant</title>
+    <!-- Font import if needed -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Critical CSS to ensure scrolling works properly -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto !important;
+        overflow-x: hidden;
+        font-family: 'Cormorant Garamond', 'Georgia', serif;
+        color: white;
+        background-color: #000;
+      }
+      
+      body {
+        position: relative;
+        min-height: 100vh;
+        scroll-behavior: smooth;
+      }
+      
+      #root {
+        min-height: 100vh;
+        position: relative;
+        overflow: visible !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <!-- Polyfill for smooth scrolling in older browsers -->
+    <script>
+      // Check if smooth scrolling is supported
+      if (!(CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth'))) {
+        // Polyfill for smooth scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+          const links = document.querySelectorAll('a[href^="#"]');
+          
+          for (const link of links) {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              
+              if (targetElement) {
+                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
